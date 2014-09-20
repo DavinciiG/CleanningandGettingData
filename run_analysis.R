@@ -13,6 +13,7 @@ fileurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%2
 download.file(fileurl,"./getdataprojectfilesFUCIHARDataset.zip")
 unzip("getdataprojectfilesFUCIHARDataset.zip")
 setwd("./UCI HAR Dataset")
+
 ### Now Lets Merge the training and test sets
 Txtrain <- read.table("train/X_train.txt")
 Txtest <- read.table("test/X_test.txt")
@@ -28,10 +29,10 @@ Subval <- rbind(Tsubtrain, Tsubtest)
 
 #------------------------------------------------------
 
-## Extracts mean and standard deviation for each measurement.
+### Extracts mean and standard deviation for each measurement mean() and std().
 
 feat <- read.table("features.txt")
-Indgoodfeat <- grep("-mean\\(\\)|-std\\(\\)", feat[, 2])
+Indgoodfeat <- grep("-mean\\(\\)|-std\\(\\)", feat[, 2]) # average and standart deviation calc
 Xval <- Xval[, Indgoodfeat]
 names(Xval) <- feat[Indgoodfeat, 2]
 names(Xval) <- gsub("\\(|\\)", "", names(Xval))
@@ -44,16 +45,16 @@ activ[, 2] = gsub("_", "", tolower(as.character(activ[, 2])))
 Yval[,1] = activ[Yval[,1], 2]
 names(Yval) <- "activity"
 #------------------------------------------------------
-## Appropriately labels the data set with descriptive activity names.
+### Data set with descriptive activity names.
 
 names(Subval) <- "subject"
 cleandata <- cbind(Subval, Yval, Xval)
 write.table(cleandata, "merge_data_1set.txt")
 
-## Create a 2nd, independent data set with the average of each variable 
-## for each activity and each subject.
+### Create a 2nd, independent data set with the average of each variable 
+### for each activity and each subject.
 
-USubject = unique(Subval)[,1]
+USubject = unique(Subval)[,1] # remove eny duplicated elements from the subjects
 nSub = length(unique(Subval)[,1])
 nActiv= length(activ[,1])
 nCols = dim(cleandata)[2]
@@ -69,4 +70,4 @@ for (i in 1:USubject) {
                 row = row+1
         }
 }
-write.table(result, "final_data_2set.txt")
+write.table(result, "final_data_2set.txt", row.names = FALSE)
