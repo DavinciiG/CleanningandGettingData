@@ -38,10 +38,11 @@ Script Operation
 
 The script call "run_analysis.R" will merge the test and training sets together as
 descrived in the objectives.
-> Warning:
+> ***Warning***:
+
 > The current script Download and unzip the data set, also sets the working directory
 > to "./UCI HAR Dataset"
-> If any error should appear with the setting of the working directory line 15 of
+> If any error should appear with the setting of the working directory line 16 of
 > the script shoulhd be comented and the working directory set to "./UCI HAR Dataset"
 
 Code Book
