@@ -43,7 +43,7 @@ descrived in the objectives.
 > The current script Download and unzip the data set, also sets the working directory
 > to "./UCI HAR Dataset"
 > If any error should appear with the setting of the working directory line 16 of
-> the script shoulhd be comented and the working directory set to "./UCI HAR Dataset"
+> the script shoulhd be comented and the working directory set to "./UCI HAR Dataset".
 
 Code Book
 ---------
