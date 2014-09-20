@@ -6,7 +6,7 @@ Data source
 The original dataset is obtained from the UCI Machine Learning repository from the project named the "Human Activity Recognition Using Smartphones Data Set". 
 The full deszcription is made avaiable here: 
 <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>
-The data set is Dowload from:
+The data set is Download from:
 <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
 
 Method and funtioning of the script 
@@ -47,23 +47,16 @@ The script *run_analysis.R* performs the following operations and manipulation o
 >    'Body' and 'Gravitty' mention the source of the force measured, the mentions 'Acc' and 'Gyro'
 >    correspond to the accelerometer or the Gyroscope and XYZ are the cartessian directions:
 
->       tBodyAcc-XYZ
->       tGravityAcc-XYZ
->       tBodyAccJerk-XYZ
->       tBodyGyro-XYZ
->       tBodyGyroJerk-XYZ
->       tBodyAccMag
->       tGravityAccMag
->       tBodyAccJerkMag
->       tBodyGyroMag
->       tBodyGyroJerkMag
->       fBodyAcc-XYZ
->       fBodyAccJerk-XYZ
->       fBodyGyro-XYZ
->       fBodyAccMag
->       fBodyAccJerkMag
->       fBodyGyroMag
->       fBodyGyroJerkMag
+>       * tBodyAcc-XYZ
+>       * tGravityAcc-XYZ
+>       * tBodyAccJerk-XYZ
+>       * tBodyGyro-XYZ
+>       * tBodyGyroJerk-XYZ
+>       * tBodyAccMag
+>       * tGravityAccMag
+>       * tBodyAccJerkMag
+>       * tBodyGyroMag
+>       * tBodyGyroJerkMag
 > 5. Finally the script creates a . txt wich contains the clean and tidy data whit the corresponding >    average values for each activity and sunject. The file is format as folow:
 >    - The first column contains subject IDs
 >    - The second column contains activity names 
