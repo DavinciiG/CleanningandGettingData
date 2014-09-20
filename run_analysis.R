@@ -11,6 +11,7 @@
 ### Download and unziping of the file
 fileurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileurl,"./getdataprojectfilesFUCIHARDataset.zip")
+dateDownloaded <- date()
 unzip("getdataprojectfilesFUCIHARDataset.zip")
 setwd("./UCI HAR Dataset")
 
