@@ -57,7 +57,7 @@ The script *run_analysis.R* performs the following operations and manipulation o
 >       * tBodyAccJerkMag
 >       * tBodyGyroMag
 >       * tBodyGyroJerkMag
-> 5. Finally the script creates a . txt wich contains the clean and tidy data whit the corresponding 
+>    Finally the script creates a . txt wich contains the clean and tidy data whit the corresponding 
 >    average values for each activity and sunject. The file is format as folow:
 >    - The first column contains subject IDs
 >    - The second column contains activity names 
